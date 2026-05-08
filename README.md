@@ -1,6 +1,6 @@
 # Factors Influencing Speech Perception Decoding with fNIRS
 
-Code to reproduce the results, tables, and figures of:
+Code to reproduce the results of:
 
 > **Factors Influencing Speech Perception Decoding with fNIRS: Analysis of Spatial and Temporal Characteristics and Signal Complexity**
 > Santiago Posso-Murillo, Luis G. Sanchez-Giraldo, Jihye Bae
@@ -17,19 +17,17 @@ relevant information. We additionally compute **Modified Multiscale Entropy
 | File | Produces |
 |---|---|
 | `audio_data.py` | Preprocessing pipeline (Beer-Lambert, TDDR, short-channel regression, bandpass, epoching). |
-| `train_shap.py` | Nested 5×3 cross-validation training of SVC / LDA with ADASYN, plus SHAP value extraction. |
-| `run_decoding.py` | Per-subject driver: writes AUC table and SHAP arrays to `outputs/`. |
-| `notebooks/01_decoding_table.ipynb` | Renders **Table I** end-to-end. |
+| `train_shap.py` | Nested 5×3 cross-validation training of SVC / LDA, plus SHAP value extraction. |
+| `run_decoding.py` | AUC table and SHAP values save in  `outputs/`. |
+| `notebooks/01_decoding_table.ipynb` | Renders **Table I**. |
 | `fig_1_and_3.py` | **Fig. 1** (subject-wise SHAP) and **Fig. 3** (group-averaged SHAP), per model. |
 | `fig_2.py` | **Fig. 2** (brain montage of SHAP relevance), per model. |
 | `fig_4.py` | **Fig. 4** (MME complexity per subject + PC1 score by performance group). |
-| `table_2.py` | Statistical analysis supporting **Table II** (per-subject area rankings). |
 
 ## Dataset
 
 We use the public dataset from Shader et al. [^shader], which is fetched
-automatically by `mne_nirs.datasets.audio_or_visual_speech.data_path()` on the
-first run (≈1 GB). No manual download is required.
+automatically by `mne_nirs.datasets.audio_or_visual_speech.data_path()` . No manual download is required.
 
 [^shader]: Shader et al., *Hearing Research*, 2018. Auditory-only and visual-only speech in fNIRS, BIDS-formatted, 8 adults, 18 trials per condition.
 
@@ -42,8 +40,6 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Tested on Python 3.10+. The first run downloads the fNIRS dataset to MNE's
-default cache (`~/mne_data/`).
 
 ## How to reproduce the paper
 
@@ -72,8 +68,7 @@ For the table-formatted version of Table I, run the notebook:
 jupyter notebook notebooks/01_decoding_table.ipynb
 ```
 
-The notebook re-runs the same training pipeline and renders Table I as a
-pandas DataFrame; expect ≈15–25 min on a modern laptop CPU.
+The notebook re-runs the same training pipeline and renders Table I.
 
 ### Step 2 — Generate Figures 1–4
 
