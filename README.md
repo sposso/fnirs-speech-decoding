@@ -110,4 +110,4 @@ MIT — see [LICENSE](LICENSE).
 
 ## Contact
 
-Santiago Posso-Murillo — `spo230@uky.edu`
+ `spo230@uky.edu`
