@@ -26,8 +26,7 @@ relevant information. We additionally compute **Modified Multiscale Entropy
 
 ## Dataset
 
-We use the public dataset from Shader et al. [^shader], which is fetched
-automatically by `mne_nirs.datasets.audio_or_visual_speech.data_path()` . No manual download is required.
+We use the public dataset from Shader et al. [^shader].
 
 [^shader]: Shader et al., *Hearing Research*, 2018. Auditory-only and visual-only speech in fNIRS, BIDS-formatted, 8 adults, 18 trials per condition.
 
@@ -83,12 +82,6 @@ python fig_4.py                      # Fig. 4a + 4b
 Outputs land in `figures/`. Figure 4 caches its MME computation in
 `outputs/mme/entropy_df.pkl`; delete that file to force recomputation.
 
-### Step 3 — Per-subject SHAP statistics (Table II support)
-
-```bash
-python table_2.py --model svc
-python table_2.py --model lda
-```
 
 Per-subject area rankings, Kruskal-Wallis omnibus tests, and pairwise
 Mann-Whitney U tests with effect sizes land in
