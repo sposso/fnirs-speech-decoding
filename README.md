@@ -18,7 +18,7 @@ relevant information. We additionally compute **Modified Multiscale Entropy
 |---|---|
 | `audio_data.py` | Preprocessing pipeline (Beer-Lambert, TDDR, short-channel regression, bandpass, epoching). |
 | `train_shap.py` | Nested 5×3 cross-validation training of SVC / LDA, plus SHAP value extraction. |
-| `run_decoding.py` | AUC table and SHAP values save in  `outputs/`. |
+| `run_decoding.py` | AUC table and SHAP values. |
 | `notebooks/01_decoding_table.ipynb` | Renders **Table I**. |
 | `fig_1_and_3.py` | **Fig. 1** (subject-wise SHAP) and **Fig. 3** (group-averaged SHAP), per model. |
 | `fig_2.py` | **Fig. 2** (brain montage of SHAP relevance), per model. |
