@@ -54,7 +54,7 @@ described in Section II.D of the paper. Outputs:
 ```
 outputs/
 ├── auc/
-│   └── auc_per_subject.csv               # long-format AUC per (subject, model, fold)
+│   └── auc_per_subject.csv               
 └── shap/
     └── subject_{0..7}/
         ├── shap_values_svc_subject_*.npz
