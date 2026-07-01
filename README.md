@@ -67,7 +67,6 @@ For the table-formatted version of Table I, run the notebook:
 jupyter notebook notebooks/01_decoding_table.ipynb
 ```
 
-The notebook re-runs the same training pipeline and renders Table I.
 
 ### Step 2 — Generate Figures 1–4
 
@@ -79,13 +78,7 @@ python fig_2.py   --model lda        # Fig. 2 (LDA variant)
 python fig_4.py                      # Fig. 4a + 4b
 ```
 
-Outputs land in `figures/`. Figure 4 caches its MME computation in
-`outputs/mme/entropy_df.pkl`; delete that file to force recomputation.
 
-
-Per-subject area rankings, Kruskal-Wallis omnibus tests, and pairwise
-Mann-Whitney U tests with effect sizes land in
-`outputs/shap_analysis/subject_*/`.
 
 ## Method summary
 
